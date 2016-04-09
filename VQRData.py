@@ -17,7 +17,7 @@ from PIL import Image
 #	list<list> CodeMat;
 class VQRData(object):
 	#	初始化
-	def __init__(self, text, version=3, ecl=qrcode.constants.ERROR_CORRECT_L):
+	def __init__(self, text, version=3, ecl=qrcode.constants.ERROR_CORRECT_H):
 		self.Text=text
 		self.Version=version
 		self.ECL=ecl
@@ -76,7 +76,7 @@ class VQRData(object):
 		pass
 
 	#	保存二维码到指定文件
-	def save(self,filePath):
+	def saveImage(self,filePath):
 		print("[VQRData] Saving QRCode Image to %s" %(filePath))
 		self.QRimg.save(filePath)
 		pass

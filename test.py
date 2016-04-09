@@ -4,6 +4,7 @@ __author__="KenLee"
 from PIL import Image
 from PIL import ImageOps
 from PIL import ImageFilter
+import pickle
 import maxflow
 #	裁剪成正方形
 def cropMiddle(img):
@@ -112,16 +113,10 @@ def main():
 	# im=Image.new("L",(1,1))
 	# print(im.putpixel((0,0),1))
 	# im.save("./res/test.png")
-	print maxflow.__version__
-	g = maxflow.Graph[int](2,2)
-	nodes=g.add_nodes(2)
-	g.add_edge(nodes[0],nodes[1],1,2)
-	g.add_tedge(nodes[0],2,5)
-	g.add_tedge(nodes[1],9,4)
-	flow=g.maxflow()
-	print(flow)
-	print "Segment of the node 0:", g.get_segment(nodes[0])
-	print "Segment of the node 1:", g.get_segment(nodes[1])
+	pf=open("./SSIMVal.dat","rb")
+	mat=pickle.load(pf)
+	pf.close()
+	for 
 	pass
 
 if __name__=="__main__":

@@ -11,8 +11,8 @@ import os
 # data:
 #	string FilePath;
 #	Image RGBImage;
-#	Image HalftoneIamge;
-#	Image ImportanceImage;
+#	Image HalftoneImg;
+#	Image ImportanceImg;
 class VQRImage(object):
 	#	构造函数
 	def __init__(self, filepath=""):
