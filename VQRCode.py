@@ -206,7 +206,7 @@ class VQRCode(object):
 		pass
 
 def main():
-	vc=VQRCode("http://www.starbucks.com/","./pics/bird.jpg",6)
+	vc=VQRCode("http://www.sysu.edu.cn/","./pics/lena.jpg",6)
 	vc.saveQRImage("./res/Hqr.png")
 	vpli=vc.trivalOptimaze()
 	#vpli=vc.graphCutOptimaze()
